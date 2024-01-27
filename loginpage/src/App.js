@@ -37,14 +37,16 @@ const Loginpage = ()=>{
             {issubmitted  && !iscorrectuser && <p>Invalid username or password</p>}
             <form onSubmit={handleSubmit}>
             <div className="container">
-            <label>Username:
-                <input type="text" required placeholder="username" 
-                name ="username" value={inputs.username} onChange={handleChange}></input>
-            </label>
-            <label>Password:
-                <input type="password" required placeholder="password" 
-                name ="password" value={inputs.password} onChange={handleChange}></input>
-            </label>
+             <div>
+             <label htmlFor="username">Username:</label>
+             <input type="text" required placeholder="username" name ="username" value={inputs.username} onChange={handleChange}></input>
+             </div>
+            
+            <div>
+            <label htmlFor="password">Password:</label>
+            <input type="password" required placeholder="password" name ="password" value={inputs.password} onChange={handleChange}></input>
+            </div>  
+            
             </div>
             <button type="submit">Submit</button>
             </form>
